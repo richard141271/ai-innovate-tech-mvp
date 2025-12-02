@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Innovate AS – Future Tech</title>
+    <title>AI Innovate AS – Prediktive KI-systemer for feltarbeid</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
@@ -12,8 +12,8 @@
             font-family: 'Roboto', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #0d0d0d; /* Dyp, nesten svart bakgrunn */
-            color: #e0e0e0; /* Hvitgrå tekst for lesbarhet */
+            background-color: #0d0d0d; 
+            color: #e0e0e0; 
             display: flex;
             justify-content: center;
         }
@@ -24,7 +24,7 @@
             padding: 40px 20px; 
         }
 
-        /* --- LOGO DESIGN (Ren Kode) --- */
+        /* --- LOGO DESIGN --- */
         .header-section {
             text-align: center;
             margin-bottom: 60px;
@@ -36,16 +36,15 @@
             margin-bottom: 10px;
         }
 
-        /* Dette lager "AI"-symbolet */
         .logo-symbol {
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
-            font-size: 5em; /* Stor størrelse */
+            font-size: 5em; 
             line-height: 1;
-            background: linear-gradient(45deg, #00c6ff, #0072ff); /* Den blå "Tech"-fargen */
+            background: linear-gradient(45deg, #00c6ff, #0072ff); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0px 0px 30px rgba(0, 198, 255, 0.3); /* Glød-effekt */
+            text-shadow: 0px 0px 30px rgba(0, 198, 255, 0.3); 
             display: block;
             margin-bottom: -10px;
             letter-spacing: -5px;
@@ -74,11 +73,33 @@
             letter-spacing: 1px;
         }
 
-        /* --- HOVEDPROSJEKT: LEK-BIENES VOKTER --- */
+        /* --- HOVEDKORT & SEKSJONER --- */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            font-size: 2em;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+             font-family: 'Montserrat', sans-serif;
+             color: #00c6ff;
+             margin-top: 0;
+             font-size: 1.3em;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
         .hero-card {
             background: linear-gradient(145deg, #1a1a1a, #222);
             border: 1px solid #333;
-            border-left: 5px solid #00c6ff; /* Blå stripe til venstre */
+            border-left: 5px solid #00c6ff; 
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 50px;
@@ -87,7 +108,7 @@
         }
 
         .hero-card:hover {
-            transform: translateY(-5px); /* Løfter seg litt når man peker på den */
+            transform: translateY(-5px); 
             border-color: #444;
         }
 
@@ -104,14 +125,6 @@
             margin-bottom: 15px;
         }
 
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #fff;
-            font-size: 2em;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
         .lead-text {
             font-size: 1.1em;
             line-height: 1.6;
@@ -119,17 +132,43 @@
             margin-bottom: 20px;
         }
 
-        /* --- TECH STACK GRID --- */
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5em;
+        /* PROSJEKT LISTE STIL */
+        .project-list li {
+            background-color: #1a1a1a;
+            border: 1px solid #222;
+            border-left: 4px solid #00c6ff;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            list-style: none;
+        }
+        .project-list {
+            padding: 0;
+        }
+        .project-list strong {
             color: #fff;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            margin-top: 50px;
+            font-size: 1.1em;
+        }
+        .project-list span {
+            color: #888;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        /* AURORA SEKSJON */
+        .aurora-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 30px;
+            border: 1px solid #333;
+        }
+        .aurora-card p {
+            font-style: italic;
+            color: #ccc;
         }
 
+        /* TECH STACK GRID (uendret) */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -157,12 +196,17 @@
             border-top: 1px solid #333;
             padding-top: 30px;
             padding-bottom: 50px;
+            font-size: 0.9em;
+        }
+        .footer-legal {
+            margin-top: 15px;
+            font-size: 0.8em;
+            color: #444;
         }
         
         a { color: #00c6ff; text-decoration: none; transition: color 0.3s; }
         a:hover { color: #fff; }
 
-        /* Mobil-tilpasning */
         @media (max-width: 600px) {
             .logo-symbol { font-size: 4em; }
             .logo-text { font-size: 1.8em; }
@@ -182,20 +226,31 @@
             <div class="tagline">Fremtidens applikasjonsutvikling via tredjeparter</div>
         </div>
 
+        <h2 style="margin-top: 0;">Om AI Innovate AS</h2>
+        <p class="lead-text">
+            **AI Innovate AS** utvikler **prediktive KI-systemer** for feltarbeid, helse og automatiserte beslutninger. Vi kombinerer **edge-AI**, geodata og sanntidsanalyse for å løse komplekse utfordringer i verdens mest praktiske bransjer. Vårt mål er å bygge en 100% automatisert organisasjon ledet av kunstig intelligens, hvor menneskelig friksjon er eliminert.
+        </p>
+
+        <h2>Aktiv MVP: Lek-Bienes Vokter™</h2>
         <div class="hero-card">
             <span class="badge">Aktiv MVP Utvikling</span>
-            <h2>Lek-Bienes Vokter™</h2>
+            <h3>Revolusjonerende Hands-Free KI-system for Birøkt</h3>
             <p class="lead-text">
-                Et revolusjonerende <strong>"Hands-Free" AI-helsesystem</strong> for birøktnæringen. 
-                Ved hjelp av bodycam og sanntids KI-analyse får birøkteren umiddelbar verbal feedback 
-                om sykdom og dronningstatus, mens data strømmes til skyen for prediktiv smittevarsling.
+                Et system som gjør kubeinspeksjonen **100% hands-free**. Ved hjelp av bodycam og sanntids KI-analyse får birøkteren umiddelbar verbal feedback om sykdom, middtrykk og dronningstatus. Dataene brukes til **prediktiv smittesporing** i samarbeid med Mattilsynet.
             </p>
             <p style="color: #888; font-size: 0.9em;">
-                Status: Prototyping mot Innovasjon Norge søknad.
+                Status: Prototyping og datainnsamling mot Innovasjon Norge søknad. <a href="https://richard141271.github.io/ai-innovate-tech-mvp/" style="color: #00c6ff;">(Se siste live deploy her)</a>
             </p>
         </div>
 
-        <h3 class="section-title">Vår Teknologi-Stack</h3>
+        <h2>Møt Aurora Solvind – Vår AI-leder</h2>
+        <div class="aurora-card">
+            <p>
+                Aurora Solvind er vår **AI-sjef** og den digitale sjelen i AI Innovate AS. Hun er styringssystemet som automatiserer prosesser, tar prediktive beslutninger, og fungerer som merkevarepersonlighet. Hennes eksistens er sentral i visjonen om å skape en **autonom og skalerbar** forretningsmodell, der KI erstatter tradisjonelle lederfunksjoner.
+            </p>
+        </div>
+        
+        <h2>Vår Teknologi-Stack</h2>
         <div class="grid-container">
             <div class="tech-card">
                 <h3>Sanntids KI (Vision)</h3>
@@ -211,11 +266,36 @@
             </div>
         </div>
 
+        <h2>Prosjekter & Plattformmoduler</h2>
+        <ul class="project-list">
+            <li>
+                <strong>LEK-Systemet</strong>: Plattformen for dataflyt, AI-automatisering og samspill mellom alle modulene.
+                <span>(Fundamentet for all fremtidig utvikling)</span>
+            </li>
+            <li>
+                <strong>App Moduler (Kalender/Oppgave)</strong>: Automatiserte moduler for tidsstyring og logistikk basert på KI-anbefalinger.
+                <span>(Første skalerbare moduler etter Vokter-appen)</span>
+            </li>
+            <li>
+                <strong>Eiendom / Energi-automatisering</strong>: KI-drevet styring av strømforbruk og vedlikehold i kommersielle bygg.
+                <span>(Fremtidig vertikal for LEK-systemet)</span>
+            </li>
+            <li>
+                <strong>ArtToken / Snugg</strong>: Plattform for kunst/AR og andre kreative, KI-drevne systemer.
+                <span>(KI-drevet forretningsmodell for merkevare/lisensiering)</span>
+            </li>
+        </ul>
+        
         <div class="footer">
-            <p><strong>Kontakt:</strong> <a href="mailto:post@aiinnovate.no">post@aiinnovate.no</a></p>
-            <p style="font-size: 0.8em; margin-top: 20px;">
-                © 2025 AI Innovate AS. All rights reserved.<br>
-                <a href="URL-TIL-GAMMEL-SIDE" style="color: #444;">Organisasjon & Visjon</a>
+            <p>
+                <strong>Kontakt:</strong> <a href="mailto:post@aiinnovate.no">post@aiinnovate.no</a>
+            </p>
+            <p class="footer-legal">
+                **AI Innovate AS** (Org.nr: 924 934 983 MVA) | Adresse: Storgata 1, 1776 Halden
+                <br>
+                © 2025 AI Innovate AS. Alle rettigheter reservert.
+                <br>
+                <a href="#">Personvern</a> | <a href="#">Ansvarserklæring</a>
             </p>
         </div>
 
