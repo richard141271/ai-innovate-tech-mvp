@@ -3,106 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Innovate – Applikasjonsutvikling & MVP Prototyping</title>
+    <title>AI Innovate AS – Future Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
+        /* --- GRUNNLEGGENDE OPPSETT --- */
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Roboto', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #121212; /* Mørk bakgrunn for Tech-følelse */
-            color: #E0E0E0; /* Lys tekstfarge */
+            background-color: #0d0d0d; /* Dyp, nesten svart bakgrunn */
+            color: #e0e0e0; /* Hvitgrå tekst for lesbarhet */
+            display: flex;
+            justify-content: center;
         }
+
         .container { 
-            max-width: 900px; 
-            margin: 50px auto; 
-            padding: 40px; 
-            background-color: #1e1e1e; /* Litt lysere boks */
-            border-radius: 8px; /* Mykere hjørner */
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1); /* Diskré glød */
+            width: 100%;
+            max-width: 1000px; 
+            padding: 40px 20px; 
         }
-        h1 { 
-            color: #00FFFF; /* Kontrastfarge (Cyan/Turkis) */
-            border-bottom: 2px solid #333; 
-            padding-bottom: 15px; 
-            margin-bottom: 20px;
+
+        /* --- LOGO DESIGN (Ren Kode) --- */
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-top: 40px;
         }
-        h2 { 
-            color: #00FFFF; 
-            margin-top: 40px; 
+
+        .logo-box {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Dette lager "AI"-symbolet */
+        .logo-symbol {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 5em; /* Stor størrelse */
+            line-height: 1;
+            background: linear-gradient(45deg, #00c6ff, #0072ff); /* Den blå "Tech"-fargen */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 30px rgba(0, 198, 255, 0.3); /* Glød-effekt */
+            display: block;
+            margin-bottom: -10px;
+            letter-spacing: -5px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo-tm {
+            font-size: 0.4em;
+            vertical-align: top;
+            color: #00c6ff;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #888;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* --- HOVEDPROSJEKT: LEK-BIENES VOKTER --- */
+        .hero-card {
+            background: linear-gradient(145deg, #1a1a1a, #222);
+            border: 1px solid #333;
+            border-left: 5px solid #00c6ff; /* Blå stripe til venstre */
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-5px); /* Løfter seg litt når man peker på den */
+            border-color: #444;
+        }
+
+        .badge {
+            background-color: #00c6ff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
             margin-bottom: 15px;
         }
-        .tech-list { 
-            list-style: none; 
-            padding: 0; 
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
-        .tech-list li { 
-            background: #2a2a2a; 
-            margin-bottom: 8px; 
-            padding: 12px; 
-            border-left: 4px solid #00FFFF; /* Fremhevingslinje */
-            border-radius: 4px; 
-            font-weight: bold;
+
+        .lead-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 20px;
         }
-        .project { 
-            border: 1px solid #333; 
-            padding: 20px; 
-            margin-bottom: 20px; 
-            border-radius: 5px; 
-            background-color: #242424;
+
+        /* --- TECH STACK GRID --- */
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
+            color: #fff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            margin-top: 50px;
         }
-        .project h3 { 
-            margin-top: 0; 
-            color: #00FFFF; 
-            font-size: 1.2em;
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
-        a { 
-            color: #00FFFF; 
-            text-decoration: none; 
+
+        .tech-card {
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
         }
-        a:hover { 
-            text-decoration: underline; 
+
+        .tech-card h3 {
+            color: #00c6ff;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
         }
-        p { 
-            line-height: 1.6; 
+
+        /* --- FOOTER --- */
+        .footer {
+            margin-top: 80px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        
+        a { color: #00c6ff; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #fff; }
+
+        /* Mobil-tilpasning */
+        @media (max-width: 600px) {
+            .logo-symbol { font-size: 4em; }
+            .logo-text { font-size: 1.8em; }
+            .hero-card { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    
-    <h1>AI Innovate – Applikasjonsutvikling & MVP Prototyping</h1>
-    <p>Fokus på rask utvikling av Minimum Viable Products (MVP) ved bruk av moderne skybaserte verktøy og tredjeparts API-er, med spesialisering innen **Hands-Free AI for Spesialiserte Næringer**.</p>
+    <div class="container">
+        
+        <div class="header-section">
+            <div class="logo-box">
+                <span class="logo-symbol">Ai</span>
+                <span class="logo-text">Innovate AS<span class="logo-tm">©</span></span>
+            </div>
+            <div class="tagline">Fremtidens applikasjonsutvikling via tredjeparter</div>
+        </div>
 
-    <h2>Vår Teknologi-Stack (Verktøyene vi bruker)</h2>
-    <ul class="tech-list">
-        <li>**Sanntids KI-Analyse (Edge/Cloud):** Avansert AI-motor for pixel-for-pixel analyse av Bodycam-video for dronningsporing og sykdomsdeteksjon.</li>
-        <li>**Mobil Prototyping & UX:** Fokus på robust offline-funksjonalitet, stemmekommandoer og "hands-free" grensesnitt.</li>
-        <li>**Geospatial & Skydata:** Bruk av GPS/Geo-lokasjon og skytjenester (f.eks. Firebase/Firestore) for prediktiv smittevarsling og synkronisering.</li>
-    </ul>
+        <div class="hero-card">
+            <span class="badge">Aktiv MVP Utvikling</span>
+            <h2>Lek-Bienes Vokter™</h2>
+            <p class="lead-text">
+                Et revolusjonerende <strong>"Hands-Free" AI-helsesystem</strong> for birøktnæringen. 
+                Ved hjelp av bodycam og sanntids KI-analyse får birøkteren umiddelbar verbal feedback 
+                om sykdom og dronningstatus, mens data strømmes til skyen for prediktiv smittevarsling.
+            </p>
+            <p style="color: #888; font-size: 0.9em;">
+                Status: Prototyping mot Innovasjon Norge søknad.
+            </p>
+        </div>
 
-    <h2>Våre Prosjekter</h2>
-    <div class="project">
-        <h3>Din Første MVP-App (Læringsprosjekt)</h3>
-        <p>En viktig lærings- og demonstrasjonsapplikasjon bygget i samarbeid med AI for å teste rask prototyping, hvilket la grunnlaget for vårt neste, mer ambisiøse prosjekt.</p>
-        <p><em>(Legg inn en lenke til GitHub her når du får tid)</em></p>
+        <h3 class="section-title">Vår Teknologi-Stack</h3>
+        <div class="grid-container">
+            <div class="tech-card">
+                <h3>Sanntids KI (Vision)</h3>
+                <p>Pixel-for-pixel videoanalyse via <strong>OpenAI Vision / Edge AI</strong> for å detektere sykdomstegn usynlige for det blotte øye.</p>
+            </div>
+            <div class="tech-card">
+                <h3>Hands-Free UX</h3>
+                <p>Stemmekontrollert grensesnitt og automatisk datafangst via sensorer, slik at telefonen kan bli liggende i lommen.</p>
+            </div>
+            <div class="tech-card">
+                <h3>Geospatial Data</h3>
+                <p>Integrasjon mot <strong>Google Maps API</strong> og Mattilsynets data for automatisert smittesporing og varsling.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Kontakt:</strong> <a href="mailto:richard141271@gmail.com">richard141271@gmail.com</a></p>
+            <p style="font-size: 0.8em; margin-top: 20px;">
+                © 2025 AI Innovate AS. All rights reserved.<br>
+                <a href="URL-TIL-GAMMEL-SIDE" style="color: #444;">Organisasjon & Visjon</a>
+            </p>
+        </div>
+
     </div>
-    <div class="project">
-        <h3>Hovedprosjekt: "Lek-Bienes Vokter" (Neste Steg)</h3>
-        <p><strong>Kjernemål:</strong> Å skape et revolusjonerende "hands-free" AI-drevet helsesystem for bier.</p>
-        <p><strong>Funksjonalitet:</strong> Bodycam-analyse gir sanntids, verbal feedback til birøkteren om unormalt (f.eks. kalkyngel), sporer dronninger automatisk, og gir prediktiv smittevarsling til Mattilsynet basert på geo-data. Appen fjerner behovet for manuell notatføring i felten.</p>
-    </div>
-
-    <h2>Kontaktinformasjon</h2>
-    <p>For henvendelser og mer informasjon om våre tekniske prosjekter, kontakt:</p>
-    <p><strong>E-post:</strong> <a href="mailto:richard141271@gmail.com">richard141271@gmail.com</a></p>
-    
-    <p style="margin-top: 40px; font-size: 0.8em; text-align: center;">
-        <a href="URL-TIL-GAMMEL-SIDE">Klikk her for å lese om vår organisatoriske visjon (flyttes snart).</a>
-    </p>
-
-</div>
 
 </body>
 </html>
