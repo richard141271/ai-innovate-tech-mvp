@@ -200,12 +200,128 @@
                 </div>
                 <p style="margin-top:12px;">For grundigere detaljer om vår visjon og teknologi, last ned vårt <a href="#">Whitepaper (kommer snart)</a> eller kontakt oss for investor‑pakke.</p>
             </section>
+        
+
+            <!-- PERSONVERN OG ANSVARSERKLÆRING -->
+            <section class="section" id="personvern">
+                <h2 class="section-title">Personvern</h2>
+                <div class="content">
+                    <p><strong>Kortversjon:</strong> Vi behandler kun data som er nødvendige for å levere våre tjenester. Hvis vi samler inn personopplysninger eller video/datasett fra piloter, skjer dette kun med eksplisitt samtykke, anonymisering og sikre lagringsrutiner.</p>
+
+                    <h3 style="margin-top:12px;">Hva vi samler inn</h3>
+                    <ul>
+                        <li>Kontaktinformasjon (navn, e‑post, telefon) ved henvendelse eller pilotpåmelding.</li>
+                        <li>Anonymiserte observasjonsdata og video for modelltrening, kun ved eksplisitt samtykke fra deltakerne.</li>
+                        <li>Tekniske loggdata, feilrapporter og anonymisert brukstelemetri for forbedring av tjenesten.</li>
+                    </ul>
+
+                    <h3 style="margin-top:12px;">Formål og hjemmel</h3>
+                    <p>Formålet er å kunne utvikle, teste og levere våre KI‑løsninger (f.eks. Lek‑Bienes Vokter™). Behandlingen skjer på grunnlag av samtykke, eller når det er nødvendig for berettigede interesser (f.eks. drift og sikkerhet). Sensitive personopplysninger samles ikke uten særskilt og informert samtykke.</p>
+
+                    <h3 style="margin-top:12px;">Lagring og sikkerhet</h3>
+                    <p>Data lagres kun så lenge det er nødvendig for formålet. Alle personopplysninger og datasett behandles med kryptering i ro og under overføring, og vi begrenser tilganger basert på rolle. Ved pilotprosjekter anonymiseres data der det er mulig før lagring.</p>
+
+                    <h3 style="margin-top:12px;">Dine rettigheter</h3>
+                    <p>Du har rett til innsyn, retting, sletting, begrensning av behandling, dataportabilitet og til å trekke tilbake samtykke. For å benytte deg av disse rettighetene, kontakt oss på <a href="mailto:post@aiinnovate.no">post@aiinnovate.no</a>.</p>
+
+                    <p style="margin-top:8px;">Les den fullstendige personvernpolicyen ved å kontakte oss; vi kan sende en detaljert versjon ved forespørsel. Denne korte versjonen er ment som en oversikt for besøkende og potensielle pilotdeltakere.</p>
+                </div>
+            </section>
+
+            <section class="section" id="ansvarserklaering">
+                <h2 class="section-title">Ansvarserklæring</h2>
+                <div class="content">
+                    <p><strong>Viktig:</strong> Informasjonen på dette nettstedet leveres "som den er" uten garantier av noe slag. AI Innovate AS gjør rimelige forsøk på å holde innholdet korrekt og oppdatert, men kan ikke garantere fullkommen nøyaktighet eller fullstendighet.</p>
+
+                    <h3 style="margin-top:12px;">Begrensning av ansvar</h3>
+                    <p>AI Innovate AS er ikke ansvarlig for direkte eller indirekte tap som følge av bruk av informasjon på dette nettstedet. Dette inkluderer, men er ikke begrenset til, tap av inntekt, data eller omdømmetap.</p>
+
+                    <h3 style="margin-top:12px;">Eksterne lenker</h3>
+                    <p>Nettstedet kan inneholde lenker til tredjepartsressurser. Vi har ikke kontroll over innholdet på eksterne sider og fraskriver oss ansvar for disse.</p>
+
+                    <h3 style="margin-top:12px;">Endringer</h3>
+                    <p>AI Innovate AS forbeholder seg retten til å oppdatere denne ansvarserklæringen og personverninformasjonen. Endringer publiseres på denne siden og trer i kraft umiddelbart etter publisering.</p>
+                </div>
+            </section>
+
+            <!-- KONTAKT -->
+            <section class="section" id="kontakt">
+                <h2 class="section-title">Kontakt oss</h2>
+                <div class="content">
+                    <p>Send oss en kort melding dersom du vil melde interesse for pilot, samarbeid eller investorforespørsel. Vi svarer normalt innen 3 virkedager.</p>
+
+                    <form id="contactForm" style="max-width:560px; margin-top:12px;">
+                        <label for="name">Navn</label><br>
+                        <input id="name" name="name" type="text" required style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #222; background:#0f0f10; color:#eee;" />
+                        <br><br>
+
+                        <label for="email">E‑post</label><br>
+                        <input id="email" name="email" type="email" required style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #222; background:#0f0f10; color:#eee;" />
+                        <br><br>
+
+                        <label for="message">Melding</label><br>
+                        <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #222; background:#0f0f10; color:#eee;"></textarea>
+                        <br><br>
+
+                        <label style="font-size:0.9rem; color:var(--muted);">
+                            <input type="checkbox" id="consent" required /> Jeg samtykker i at AI Innovate AS kan lagre mine kontaktopplysninger for å følge opp henvendelsen.
+                        </label>
+
+                        <br><br>
+                        <button type="submit" class="btn">Send melding</button>
+                        <p id="formStatus" style="margin-top:10px; color:var(--muted);"></p>
+                    </form>
+
+                    <script>
+                        (function(){
+                            const form = document.getElementById('contactForm');
+                            const status = document.getElementById('formStatus');
+                            form.addEventListener('submit', function(e){
+                                e.preventDefault();
+                                const name = document.getElementById('name').value.trim();
+                                const email = document.getElementById('email').value.trim();
+                                const message = document.getElementById('message').value.trim();
+                                const consent = document.getElementById('consent').checked;
+                                if(!name || !email || !message || !consent){
+                                    status.textContent = 'Vennligst fyll ut alle felt og godta samtykke.';
+                                    return;
+                                }
+                                // Fallback: åpner brukerens e‑postklient med ferdig utfylt melding
+                                const subject = encodeURIComponent('Kontakt fra nettside: ' + name);
+                                const body = encodeURIComponent('Navn: ' + name + '
+Epost: ' + email + '
+
+Melding:
+' + message);
+                                window.location.href = 'mailto:post@aiinnovate.no?subject=' + subject + '&body=' + body;
+                                status.textContent = 'Epost åpnes i din e‑postklient. Hvis ingenting skjer, send en epost til post@aiinnovate.no.';
+                            });
+                        })();
+                    </script>
+                </div>
+            </section>
+
+            <!-- UTVIKLINGSLOGG -->
+            <section class="section" id="utviklingslogg">
+                <h2 class="section-title">Utviklingslogg</h2>
+                <div class="content">
+                    <p>Her er en kort historikk over viktige milepæler. Denne loggen oppdateres ved betydelige releaser og milepæler.</p>
+                    <ul style="margin-top:12px;">
+                        <li><strong>2025‑02‑01:</strong> Oppstart av Lek‑Bienes Vokter™ prosjektet (konseptfase).</li>
+                        <li><strong>2025‑04‑15:</strong> Ferdigstilt første prototype for edge‑analyse og grunnleggende modelltrening.</li>
+                        <li><strong>2025‑06‑30:</strong> Pilotdatainnsamling igangsatt med første gruppe birøktere.</li>
+                        <li><strong>2025‑10‑10:</strong> Integrasjon av geodata for smittesporing og protokoll for anonymisering.</li>
+                    </ul>
+                    <p style="margin-top:12px;">Vil du at jeg legger inn flere tidligere datoer eller gjør loggen mer detaljert? Jeg kan også gjøre den nedlastbar som CSV/JSON for intern oversikt.</p>
+                </div>
+            </section>
+
         </main>
 
         <footer class="footer" role="contentinfo">
             <p class="small"><strong>Kontakt:</strong> <a href="mailto:post@aiinnovate.no">post@aiinnovate.no</a> &nbsp;|&nbsp; <a href="tel:+4747372406">+47 47 37 24 06</a></p>
             <p class="small" style="margin-top:10px;">Org.nr.: <strong>935 460 387</strong> &nbsp;•&nbsp; Fredriksfrydveien 2, 1792 TISTEDAL</p>
-            <p class="small" style="margin-top:12px; color:var(--muted);">© 2025 AI Innovate AS. Alle rettigheter reservert. &nbsp;|&nbsp; <a href="#">Personvern</a> &nbsp;•&nbsp; <a href="#">Ansvarserklæring</a> &nbsp;•&nbsp; <a href="#">Utviklingslogg</a></p>
+            <p class="small" style="margin-top:12px; color:var(--muted);">© 2025 AI Innovate AS. Alle rettigheter reservert. &nbsp;|&nbsp; <a href="#personvern">Personvern</a> &nbsp;•&nbsp; <a href="#ansvarserklaering">Ansvarserklæring</a> &nbsp;•&nbsp; <a href="#utviklingslogg">Utviklingslogg</a></p>
         </footer>
     </div>
 </body>
